@@ -19,7 +19,8 @@ lcd.print("Circumference");
 
 void loop() {
 //The main expression for the prototype
-length =  analogRead(pot)*(11.5/1023)+19.7; 
+voltage= analogRead(pot)
+length =  voltage*(11.5/1023)+19.7; 
 
 //As the code run this will display the converted value as "Length cm" 
 lcd.setCursor(4,1);

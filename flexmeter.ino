@@ -1,3 +1,4 @@
+//Before running the program make sure the library is the resource.
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 

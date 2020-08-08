@@ -14,10 +14,10 @@ float len = 19.7; //The initial length of the device
 void setup() {
 //Intialization of the LCD Screen
 Serial.begin(9600);
-//This lcd will display "Circumference"
+
 lcd.begin(16,2);
 lcd.setCursor(1,0);
-lcd.print("Circumference");
+lcd.print("Circumference"); //This lcd will display "Circumference"
 }
 
 void loop() {
@@ -25,17 +25,17 @@ void loop() {
 voltage= analogRead(potentio)
 length =  voltage*(11.5/1023)+len; 
 
-//As the code run this will display the converted value as "Length cm" 
+//As the code run this will display the converted value as 'Length+"cm"' 
 lcd.setCursor(4,1);
 lcd.print(length, 4);
-
 lcd.print(" ");
-lcd.setCursor(11,1);
 
+lcd.setCursor(11,1);
 lcd.print("cm");
+
 Serial.println(length, 4);
-//Make delay before make another loop
-delay(300);
+
+delay(300); //Make delay before make another loop
 
 }
 
